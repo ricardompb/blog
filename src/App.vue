@@ -12,7 +12,7 @@
       </nav>
       <div class="row justify-content-center color pt-5" style="color: white">
         <div class="col-md-2" v-if="foto">
-          <b-avatar src="https://placekitten.com/300/300" size="6rem"></b-avatar>
+          <b-avatar :src="foto" size="6rem" />
         </div>
         <div class="col-md-6">
           <div class="row">
@@ -22,7 +22,7 @@
           </div>
           <div class="row">
             <div class="col-md-8">
-              {{ descricao }}
+              <span v-html="descricao"/>
             </div>
           </div>
         </div>

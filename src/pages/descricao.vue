@@ -8,7 +8,7 @@ export default {
   name: 'PagDescricao',
   mounted () {
     this.setVal({
-      foto: '',
+      foto: 'https://placekitten.com/300/300',
       nome: 'Descrição',
       descricao: ''
     })
