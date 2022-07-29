@@ -11,11 +11,20 @@
         </v-input>
       </nav>
       <div class="row justify-content-center color pt-5" style="color: white">
-        <div class="col-md-2">
+        <div class="col-md-2" v-if="foto">
           <b-avatar src="https://placekitten.com/300/300" size="6rem"></b-avatar>
         </div>
         <div class="col-md-6">
-          {{ descricao }}
+          <div class="row">
+            <div class="col-md-4">
+              {{ nome }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              {{ descricao }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -37,6 +46,7 @@ export default {
   computed: {
     ...mapState({
       foto: state => state.foto,
+      nome: state => state.nome,
       descricao: state => state.descricao,
     })
   }

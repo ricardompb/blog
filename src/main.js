@@ -9,6 +9,7 @@ import router from './router'
 const store = createStore({
   state: {
     foto: '',
+    nome: '',
     descricao: ''
   },
   mutations: {
