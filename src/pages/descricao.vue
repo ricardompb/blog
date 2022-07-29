@@ -9,7 +9,7 @@ export default {
   mounted () {
     this.setVal({
       foto: 'https://placekitten.com/300/300',
-      nome: 'Descrição',
+      nome: '',
       descricao: ''
     })
   },
