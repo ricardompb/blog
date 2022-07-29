@@ -1,15 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="row">
+    <div class="col-md-12 backgroupd-box" style="top: -50px">
+      <nav>
+        <router-link class="link" to="/">Blog</router-link> |
+        <router-link class="link" to="/sobre">Sobre</router-link> |
+        <router-link class="link" to="/descricao">Descrição</router-link>
+        <v-input :messages="['Messages']"
+                 append-icon="mdi-close"
+                 prepend-icon="mdi-phone">
+        </v-input>
+      </nav>
+      <div class="row justify-content-center color pt-5" style="color: white">
+        <div class="col-md-2">
+          <b-avatar src="https://placekitten.com/300/300" size="6rem"></b-avatar>
+        </div>
+        <div class="col-md-6">
+          {{ descricao }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <router-view/>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { mapState } from 'vuex'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: {},
+  computed: {
+    ...mapState({
+      foto: state => state.foto,
+      descricao: state => state.descricao,
+    })
   }
 }
 </script>
@@ -22,5 +51,14 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.backgroupd-box {
+  background-color: steelblue;
+}
+
+.link {
+  color: white;
+  line-break: loose;
 }
 </style>
