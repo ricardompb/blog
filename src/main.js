@@ -14,8 +14,9 @@ const store = createStore({
   },
   mutations: {
     setVal (state, payload) {
-      const { foto, descricao } = payload
+      const { foto, nome, descricao } = payload
       state.foto = foto
+      state.nome = nome
       state.descricao = descricao
     }
   }

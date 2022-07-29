@@ -9,7 +9,7 @@ export default {
   mounted () {
     this.setVal({
       foto: '',
-      nome: '',
+      nome: 'Descrição',
       descricao: ''
     })
   },

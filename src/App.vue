@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row justify-content-start">
     <div class="col-md-12 backgroupd-box" style="top: -50px">
       <nav>
         <router-link class="link" to="/">Blog</router-link> |
