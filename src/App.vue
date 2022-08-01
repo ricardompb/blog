@@ -15,12 +15,12 @@
           <b-avatar :src="foto" size="6rem" />
         </div>
         <div class="col-md-6">
-          <div class="row">
+          <div class="row text-start">
             <div class="col-md-4">
               {{ nome }}
             </div>
           </div>
-          <div class="row">
+          <div class="row text-start">
             <div class="col-md-8">
               <span v-html="descricao"/>
             </div>
